@@ -1,4 +1,7 @@
 # Pedra Papel e Tesoura
+from time import sleep
+from random import randint
+
 cores = {
     'limpa': '\033[m',
     'branco': '\033[30m',
@@ -11,12 +14,11 @@ cores = {
     'cinza': '\033[37m',
     'sublinhado': '\033[4m'
 }
-from random import randint
-from time import sleep
+
 itens = ('Pedra', 'Papel', 'Tesoura')
 computador = randint(0,2)
 escolha_computador = itens[computador]
-print('-=-=-=-=-=-=-=-=-=- PEDRA, PAPEL E TESOURA -=-=-=-=-=-=-=-=-')
+print(f'{cores["amarelo"]}-=-=-=-=-=-=-=-=-=- PEDRA, PAPEL E TESOURA -=-=-=-=-=-=-=-=-{cores["limpa"]}')
 usuario = int(input('''Suas opções:
 [0] PEDRA
 [1] PAPEL
@@ -38,7 +40,62 @@ else:
 
     print('-=-' * 20)
     print(f'O computador jogou {escolha_computador}')
+    if computador == 0:
+        print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+    elif computador == 1:
+        print('''
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+''')
+    else:
+        print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+        
     print(f'O usuário jogou {escolha_usuário}')
+    if usuario == 0:
+        print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+    elif usuario == 1:
+        print('''
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+''')
+    else:
+        print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
     print('-=-' * 20)
 
     if computador == 0:
