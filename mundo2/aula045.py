@@ -22,39 +22,46 @@ usuario = int(input('''Suas opções:
 [1] PAPEL
 [2] TESOURA           
 '''))
-escolha_usuário = itens[usuario]
 
-print('JO')
-sleep(1)
-print('KEN')
-sleep(1)
-print('PO!!!')
-
-print('-=-' * 20)
-print(f'O computador jogou {escolha_computador}')
-print(f'O usuário jogou {escolha_usuário}')
-print('-=-' * 20)
-
-if computador == 0:
-    if usuario == 0:
-        print(f'{cores["amarelo"]}DEU EMPATE!{cores["limpa"]}')
-    elif usuario == 1:
-        print(f'{cores["verde"]}O USUÁRIO GANHOU!{cores["limpa"]}')
-    elif usuario == 2:
-        print(f'{cores["vermelho"]}O COMPUTADOR GANHOU!{cores["limpa"]}')
-
-elif computador == 1:
-    if usuario == 0:
-        (f'{cores["vermelho"]}O COMPUTADOR GANHOU!{cores["limpa"]}')
-    elif usuario == 1:
-        print(f'{cores["amarelo"]}DEU EMPATE!{cores["limpa"]}')
-    elif usuario == 2:
-        print(f'{cores["verde"]}O USUÁRIO GANHOU!{cores["limpa"]}')
-
+if usuario > 2 or usuario < 0:
+    print(f'{cores["vermelho"]}JOGADA INVÁLIDA!{cores["limpa"]}')
+    print('Por favor, escolha entre 0, 1 ou 2.')
+    print('-=-' * 20)
 else:
-    if usuario == 0:
-        print(f'{cores["verde"]}O USUÁRIO GANHOU!{cores["limpa"]}')
-    elif usuario == 1:
-        (f'{cores["vermelho"]}O COMPUTADOR GANHOU!{cores["limpa"]}')
-    elif usuario == 2:
-        print(f'{cores["amarelo"]}DEU EMPATE!{cores["limpa"]}')
+    escolha_usuário = itens[usuario]
+     
+    print('JO')
+    sleep(1)
+    print('KEN')
+    sleep(1)
+    print('PO!!!')
+
+    print('-=-' * 20)
+    print(f'O computador jogou {escolha_computador}')
+    print(f'O usuário jogou {escolha_usuário}')
+    print('-=-' * 20)
+
+    if computador == 0:
+        if usuario == 0:
+            print(f'{cores["amarelo"]}DEU EMPATE!{cores["limpa"]}')
+        elif usuario == 1:
+            print(f'{cores["verde"]}O USUÁRIO GANHOU!{cores["limpa"]}')
+        elif usuario == 2:
+            print(f'{cores["vermelho"]}O COMPUTADOR GANHOU!{cores["limpa"]}')
+
+    elif computador == 1:
+        if usuario == 0:
+            (f'{cores["vermelho"]}O COMPUTADOR GANHOU!{cores["limpa"]}')
+        elif usuario == 1:
+            print(f'{cores["amarelo"]}DEU EMPATE!{cores["limpa"]}')
+        elif usuario == 2:
+            print(f'{cores["verde"]}O USUÁRIO GANHOU!{cores["limpa"]}')
+
+    else:
+        if usuario == 0:
+            print(f'{cores["verde"]}O USUÁRIO GANHOU!{cores["limpa"]}')
+        elif usuario == 1:
+            (f'{cores["vermelho"]}O COMPUTADOR GANHOU!{cores["limpa"]}')
+        elif usuario == 2:
+            print(f'{cores["amarelo"]}DEU EMPATE!{cores["limpa"]}')
+
