@@ -15,4 +15,4 @@ while valor < 100:
     valor += numero
 
 print(f'Valor total: {valor}')
-print('FIM')
+print('FIM')                                     

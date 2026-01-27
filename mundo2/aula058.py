@@ -1,10 +1,11 @@
 # jogo da advinhação V2.0
-import random
-numero_da_maquina = random.randint(0, 10)
+from random import randint
+numero_da_maquina = randint(0, 10)
 cores = {
     'verde': '\033[1;32m',
     'limpa': '\033[m', 
 }
+tentativas = 1
 
 print(f'{cores["verde"]}-=-{cores["limpa"]}' * 18)
 print(f'             {cores["verde"]}JOGO DA ADVINHAÇÃO V2.0{cores["limpa"]}')
@@ -27,8 +28,16 @@ usuario = int(input('Seu Palpite: '))
 
 while usuario != numero_da_maquina:
     print('Resposta errada! Tente novamente')
+    if usuario < numero_da_maquina:
+        print('Mais... Tente novamente!')
+    else:
+        print('Menos... Tente novamente!')
     usuario = int(input('Seu Palpite: '))
-    
-print(f'Você acertou! o número era o {numero_da_maquina}')
+    tentativas += 1
+
+if tentativas == 1:
+    print(f'Parabens! Você acertou na PRIMEIRA tentativa, o número era o {numero_da_maquina}')
+else:
+    print(f'Você acertou em {tentativas} tentativas! o número era o {numero_da_maquina}')
 print('FIM')
 print(f'{cores["verde"]}-=-{cores["limpa"]}' * 18)
