@@ -39,5 +39,11 @@ if tentativas == 1:
     print(f'Parabens! Você acertou na PRIMEIRA tentativa, o número era o {numero_da_maquina}')
 else:
     print(f'Você acertou em {tentativas} tentativas! o número era o {numero_da_maquina}')
-print('FIM')
+print(print('''Fim do programa 
+  __
+<(o )___
+ ( ._> /
+  `---'   quak
+
+      '''))
 print(f'{cores["verde"]}-=-{cores["limpa"]}' * 18)

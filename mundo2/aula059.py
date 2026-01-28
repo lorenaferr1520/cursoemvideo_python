@@ -15,10 +15,10 @@ while opcao != 5: # 5 seria a opção para 'Sair'
     opcao = int(input('>>>> Qual é a sua opção? '))
     
     if opcao == 1:
-        print(f'{p1} X {p2} é igual a {p1 * p2}')
+        print(f'{p1} + {p2} é igual a {p1 + p2}')
         
     elif opcao == 2:
-        print(f'{p1}  {p2} é igual a {p1 + p2}')
+        print(f'{p1} X {p2} é igual a {p1 * p2}')
             
     elif opcao == 3:
         if p1 > p2:
