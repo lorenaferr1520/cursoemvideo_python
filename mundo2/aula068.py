@@ -1,5 +1,6 @@
 # jogo do par ou impar
 from random import randint
+from time import sleep
 cores = {
     'limpa': '\033[m',
     'vermelho': '\033[1;31m', # Negrito + Vermelho
@@ -23,6 +24,16 @@ while True:
     total = computador + usuario 
     par = total % 2 == 0
    
+    if escolha != 'P' and escolha != 'I':
+        print(f'{cores["vermelho"]}Escolha inválida! apenas par [P] ou impar [I]{cores["limpa"]}')
+        print(f'{cores["vermelho"]}Encerrando programa...{cores["limpa"]}')
+        print(f'{cores["vermelho"]}3..{cores["limpa"]}')
+        sleep(1.0)
+        print(f'{cores["vermelho"]}2..{cores["limpa"]}')
+        sleep(1.0)
+        print(f'{cores["vermelho"]}1..{cores["limpa"]}')
+        sleep(1.0)
+        break
     
     print(f'Você jogou {usuario} o computador jogou {computador}, total de {total}')
     
